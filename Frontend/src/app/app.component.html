@@ -1,0 +1,19 @@
+<div class="event-card" *ngFor="let event of events">
+  <div class="card event">
+    <div class="card-header">
+      <h5 class="card-title">{{ event.title }} ({{ event.ageRestriction }}+)</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ event.date | date }}</h6>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{ event.description }}</p>
+      <div class="ticket-wrapper">
+        <div class="ticket" *ngFor="let ticket of event.tickets">
+          <p class="ticket-type">{{ ticket.type }}</p>
+          <p class="ticket-price">{{ ticket.price | currency }}</p>
+          <p class="ticket-quantity">{{ ticket.quantity }} tickets left</p>
+          <button class="btn btn-primary" (click)="openDialog(ticket.id)">Ticket kaufen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

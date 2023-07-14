@@ -1,0 +1,23 @@
+.modal-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.8rem 0.8rem 0 0.8rem;
+}
+
+.modal-body {
+  padding: 0 0.8rem 0 0.8rem;
+}
+
+.modal-footer {
+  padding: 0.8rem;
+  justify-content: space-between;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="email"] {
+  width: 100%;
+}

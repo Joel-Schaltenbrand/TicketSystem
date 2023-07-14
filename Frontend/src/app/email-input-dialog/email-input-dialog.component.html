@@ -1,0 +1,10 @@
+<h2 class="modal-title">E-Mail-Adresse eingeben</h2>
+<div class="modal-body">
+    <div class="form-group">
+        <input class="form-control" id="emailInput" placeholder="E-Mail-Adresse" [(ngModel)]="email" type="email">
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-secondary" (click)="dialogRef.close()">Abbrechen</button>
+    <button class="btn btn-primary" (click)="submitEmail()">OK</button>
+</div>

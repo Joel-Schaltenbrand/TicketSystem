@@ -1,0 +1,43 @@
+<div #ticketView class="ticket-popup">
+    <div class="ticket-header">
+        <h2>{{ data.ticket.event.title }}</h2>
+        <p class="event-info">{{ data.ticket.event.date | date:"EEEE, dd.MM.yyyy 'at' HH:mm" }} | {{
+            data.ticket.event.location }}</p>
+        <p class="event-info">{{ data.ticket.event.description }}</p>
+        <hr>
+    </div>
+
+    <div class="ticket-content">
+        <div class="customer-details">
+            <h3><strong>Customer Details</strong></h3>
+            <p>{{ data.customer.firstName }} {{ data.customer.lastName }}
+                <br>{{ data.customer.street }}<br>{{
+                data.customer.zip }} {{
+                data.customer.location
+                }}
+            </p>
+            <p>{{ data.customer.email }}</p>
+        </div>
+
+        <div class="ticket-details">
+            <h3><strong>Ticket Information</strong></h3>
+            <p><strong>Type:</strong> {{ data.ticket.type }}<br>
+                <strong>Price:</strong> {{ data.ticket.price }}<br>
+                <strong>Age restriction:</strong> {{ data.ticket.event.ageRestriction }}+<br>
+            </p>
+        </div>
+    </div>
+
+    <div class="qr-code">
+        <qrcode [qrdata]="data.token.verifyToken" [width]="256" [errorCorrectionLevel]="'H'"></qrcode>
+        <p class="text-center">{{ data.token.verifyToken }}</p>
+        <p class="text-center">{{ data.token.timestamp | date:"dd.MM.yyyy HH:mm:ss" }}</p>
+    </div>
+
+    <div #ticketFooter class="ticket-footer">
+        <button mat-icon-button class="close-button" (click)="dialogRef.close()">
+            <mat-icon>close</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" (click)="onDownloadClick()">Download as PDF</button>
+    </div>
+</div>
