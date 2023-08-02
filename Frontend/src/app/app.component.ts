@@ -67,6 +67,13 @@ export class AppComponent implements OnInit {
       }
     });
 
+    //Here, the Tickets will be sorted by the Typename. (For better usability)
+    events.forEach((event) => {
+      event.tickets.sort((a: { type: any }, b: { type: any }) =>
+        a.type.localeCompare(b.type)
+      );
+    });
+
     return events;
   }
 
