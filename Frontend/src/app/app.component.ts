@@ -44,6 +44,7 @@ export class AppComponent implements OnInit {
             title: ticket.event.title,
             date: new Date(ticket.event.date),
             description: ticket.event.description,
+            location: ticket.event.location,
             ageRestriction: ticket.event.ageRestriction,
             tickets: [
               {

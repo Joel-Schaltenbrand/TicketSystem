@@ -43,7 +43,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .event-card .card .ticket-wrapper .ticket {
@@ -87,5 +86,4 @@
 .event-card .card .ticket-wrapper .ticket .ticket-quantity {
   font-size: 14px;
   color: #888;
-  margin-top: 5px;
 }
