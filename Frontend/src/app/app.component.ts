@@ -74,6 +74,9 @@ export class AppComponent implements OnInit {
       );
     });
 
+    // Sort events by title
+    events.sort((a, b) => a.title.localeCompare(b.title));
+
     return events;
   }
 
