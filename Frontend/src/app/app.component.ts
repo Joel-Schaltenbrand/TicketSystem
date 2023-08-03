@@ -5,6 +5,7 @@ import { EmailInputDialogComponent } from "./email-input-dialog/email-input-dial
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { TicketViewComponent } from "./ticket-view/ticket-view.component";
 import { environment } from "../environments/environment";
+import { CreateUserComponent } from "./create-user/create-user.component";
 
 @Component({
   selector: "app-root",
@@ -144,5 +145,16 @@ export class AppComponent implements OnInit {
     };
 
     this.dialog.open(TicketViewComponent, dialogConfig);
+  }
+
+  openCreateUserDialog(): void {
+    const dialogRef = this.dialog.open(CreateUserComponent, {
+      width: "500px",
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.snackBar.open("User created", "OK");
+      }
+    });
   }
 }

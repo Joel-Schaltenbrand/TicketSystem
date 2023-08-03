@@ -1,0 +1,33 @@
+<mat-dialog-content>
+    <form (ngSubmit)="createUser()" class="create-user-form">
+        <h2>Create User</h2>
+
+        <mat-form-field class="input-field">
+            <input matInput placeholder="First Name" [(ngModel)]="user.firstName" name="firstName" required>
+        </mat-form-field>
+
+        <mat-form-field class="input-field">
+            <input matInput placeholder="Last Name" [(ngModel)]="user.lastName" name="lastName" required>
+        </mat-form-field>
+
+        <mat-form-field class="input-field">
+            <input matInput placeholder="Street" [(ngModel)]="user.street" name="street" required>
+        </mat-form-field>
+
+        <mat-form-field class="input-field">
+            <input matInput placeholder="PLZ" [(ngModel)]="user.zip" name="zip" required>
+        </mat-form-field>
+
+        <mat-form-field class="input-field">
+            <input matInput placeholder="Location" [(ngModel)]="user.location" name="location" required>
+        </mat-form-field>
+
+        <mat-form-field class="input-field">
+            <input matInput placeholder="E-Mail" [(ngModel)]="user.email" name="email" required>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit">Create User</button>
+        </div>
+    </form>
+</mat-dialog-content>

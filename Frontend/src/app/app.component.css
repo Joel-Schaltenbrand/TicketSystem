@@ -1,3 +1,10 @@
+.create-user-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
 .event-card {
   display: flex;
   justify-content: center;

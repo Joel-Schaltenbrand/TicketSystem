@@ -1,0 +1,15 @@
+.create-user-form {
+  width: 450px;
+  padding: 20px;
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
