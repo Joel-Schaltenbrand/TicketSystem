@@ -16,14 +16,16 @@ import { CreateUserComponent } from "./create-user/create-user.component";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { MainViewComponent } from "./main-view/main-view.component";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EmailInputDialogComponent,
-    TicketViewComponent,
-    CreateUserComponent,
-  ], // Declaring the app component and other custom components
+    AppComponent, // Main app component
+    EmailInputDialogComponent, // Custom dialog for email input
+    TicketViewComponent, // Component for displaying tickets
+    CreateUserComponent, // Component for creating users
+    MainViewComponent, // Main view component
+  ],
   imports: [
     BrowserModule, // Required for running the application in the browser
     AppRoutingModule, // Routing configuration module
@@ -34,11 +36,11 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     MatSnackBarModule, // Material snack bar module
     QRCodeModule, // QR code module for generating QR codes
     MatIconModule, // Material icon module
-    MatInputModule,
-    MatButtonModule,
-    MatFormFieldModule,
+    MatInputModule, // Material input module
+    MatButtonModule, // Material button module
+    MatFormFieldModule, // Material form field module
   ],
-  providers: [],
-  bootstrap: [AppComponent],
+  providers: [], // Service providers (if any) can be added here
+  bootstrap: [AppComponent], // The root component to bootstrap the application
 })
 export class AppModule {}
